@@ -1,14 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Pokémon GO Merchandise</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <style>
         /* Custom styles */
         body {
@@ -55,24 +55,35 @@
             text-decoration: none;
         }
 
+        /* Responsive Navbar */
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%283, 3, 3, 0.5%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
         #hero {
-            background: url('https://example.com/pokemon-background.jpg') no-repeat center center/cover;
+            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
             color: #fff;
             text-align: center;
             padding: 100px 0;
         }
 
-        #hero .cta-button {
+        .jumbotron-custom {
             background: #ffcc00;
             color: #3b4cca;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
+            text-align: center;
+            padding: 40px 20px;
         }
 
-        section {
-            padding: 60px 0;
+        .jumbotron-custom h1 {
+            font-size: 48px;
+        }
+
+        .jumbotron-custom p {
+            font-size: 24px;
         }
 
         .container {
@@ -81,19 +92,8 @@
             max-width: 1200px;
         }
 
-        #features ul {
-            list-style: disc;
-            padding-left: 20px;
-        }
-
-        .download-link, .cta-button {
-            display: inline-block;
-            background: #3b4cca;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            margin: 10px;
-            border-radius: 5px;
+        .card {
+            margin-bottom: 30px;
         }
 
         footer {
@@ -106,63 +106,305 @@
         footer p {
             margin: 0;
         }
+
+        .footer-top {
+            background: #3b4cca;
+            color: #fff;
+            padding: 40px 0;
+        }
+
+        .footer-top .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-top ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-top ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-top ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            background: #2a2a2a;
+            color: #ccc;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-bottom a {
+            color: #ccc;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+
+        .footer-logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .footer-logo img {
+            max-width: 100px;
+            margin-left: 20px;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
             <h1>Pokémon GO Merchandise</h1>
-            <nav>
-                <ul class="nav">
-                     <li><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
-    <section id="hero">
-        <div class="container">
-            <h2>Catch 'Em All with Style!</h2>
-            <p>Explore our exclusive collection of Pokémon GO merchandise. Find the perfect gear to enhance your adventure.</p>
-            <a href="#products" class="btn btn-warning btn-lg cta-button">Shop Now</a>
+
+    <div id="hero" class="jumbotron jumbotron-fluid">
+        <div id="heroCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://via.placeholder.com/1920x600" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="display-4">Welcome to the Pokémon GO Webstore!</h1>
+                        <p class="lead">Your one-stop shop for all things Pokémon GO!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://via.placeholder.com/1920x600" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="display-4">Welcome to the Pokémon GO Webstore!</h1>
+                        <p class="lead">Your one-stop shop for all things Pokémon GO!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://via.placeholder.com/1920x600" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="display-4">Welcome to the Pokémon GO Webstore!</h1>
+                        <p class="lead">Your one-stop shop for all things Pokémon GO!</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-    </section>
-    <section id="about">
-        <div class="container">
-            <h2>About Pokémon GO Merchandise</h2>
-            <p>We offer a wide range of official Pokémon GO merchandise, including apparel, accessories, and collectibles. Our products are designed to bring the Pokémon world to life, whether you're catching Pokémon in the real world or just showing off your trainer pride.</p>
-        </div>
-    </section>
-    <section id="features">
-        <div class="container">
-            <h2>Features</h2>
-            <ul>
-                <li>Exclusive Pokémon-themed apparel</li>
-                <li>High-quality accessories</li>
-                <li>Limited edition collectibles</li>
-                <li>Officially licensed merchandise</li>
-            </ul>
-        </div>
-    </section>
-    <section id="products">
-        <div class="container">
-            <h2>Our Products</h2>
-            <p>Check out our diverse range of Pokémon GO merchandise. From T-shirts to hats, from backpacks to phone cases, we have everything a trainer needs!</p>
-            <a href="products.html" class="btn btn-primary btn-lg download-link">View Products</a>
-        </div>
-    </section>
+    </div>
+
+    <main class="container">
+        <section id="featured-items">
+            <h2 class="section-title">Featured Items</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">PokéCoins Bundle</h5>
+                            <p class="card-text">Purchase PokéCoins to enhance your Pokémon GO experience.</p>
+                            <p class="card-text"><strong>Price:</strong> PHP 500 for 5,200 PokéCoins</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Special Event Ticket: Safari Zone</h5>
+                            <p class="card-text">Access exclusive in-game event with rare Pokémon spawns.</p>
+                            <p class="card-text"><strong>Price:</strong> PHP 300 per ticket</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Pokémon GO Plus Accessory</h5>
+                            <p class="card-text">Catch Pokémon and spin PokéStops without looking at your phone.</p>
+                            <p class="card-text"><strong>Price:</strong> PHP 1,800</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="best-sellers" class="mt-5">
+            <h2 class="section-title">Best Sellers</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Item 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Item 1</h5>
+                            <p class="card-text">This is the description of item 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Item 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Item 2</h5>
+                            <p class="card-text">This is the description of item 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Item 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Item 3</h5>
+                            <p class="card-text">This is the description of item 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="exclusive-offers" class="mt-5">
+            <h2 class="section-title">Exclusive Offers</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Offer 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Offer 1</h5>
+                            <p class="card-text">This is the description of offer 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Offer 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Offer 2</h5>
+                            <p class="card-text">This is the description of offer 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Offer 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Offer 3</h5>
+                            <p class="card-text">This is the description of offer 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="in-game-news" class="mt-5">
+            <h2 class="section-title">In-Game News</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://via.placeholder.com/540x360" class="img-fluid" alt="In-Game News">
+                </div>
+                <div class="col-md-6">
+                    <p>Stay updated with the latest in-game news and events happening in Pokémon GO. Don't miss out on
+                        special events, new features, and exclusive items.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Pokémon. © 1995–2024 Nintendo/Creatures Inc./GAME FREAK inc. Pokémon and Pokémon character names are trademarks of Nintendo.</p>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Customer Service</h4>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Shipping Information</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Follow Us</h4>
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Newsletter</h4>
+                        <p>Sign up for our newsletter to get the latest updates and offers.</p>
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-logo">
+                    <img src="https://via.placeholder.com/100x50" alt="Logo">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Pokémon GO Merchandise. All rights reserved.</p>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies (Optional, for Bootstrap features) -->
+    <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
