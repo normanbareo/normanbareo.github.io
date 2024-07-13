@@ -93,15 +93,32 @@
 
         .card {
             margin: 20px 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .card img {
             max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
         }
 
         .group h1 {
             color: #3b4cca;
             margin-top: 0;
+        }
+
+        .card-space {
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -156,10 +173,8 @@
     <div class="container">
         <div class="group">
             <h1>About Our Group</h1>
-            <p>Welcome to Pokémon GO Merchandise, your one-stop shop for Pokémon-themed merchandise and apparel. We bring you a wide range of products inspired by the Pokémon universe, from clothing and accessories to collectibles and more.</p>
-            
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 card-space">
                     <div class="card">
                         <img src="./Group Photo/Norman.jpg" class="card-img-top" alt="Member 1">
                         <div class="card-body">
@@ -168,16 +183,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 card-space">
                     <div class="card">
                         <img src="./Group Photo/Jericho.jpg" class="card-img-top" alt="Member 2">
                         <div class="card-body">
                             <h5 class="card-title">Jericho Santos</h5>
-                            <p class="card-text">One of the coder of this page and login page</p>
+                            <p class="card-text">One of the coders of this page and login page</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 card-space">
                     <div class="card">
                         <img src="./Group Photo/Hafalla.jpg" class="card-img-top" alt="Member 3">
                         <div class="card-body">
@@ -186,7 +201,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 card-space">
                     <div class="card">
                         <img src="./Group Photo/Larracas.jpeg" class="card-img-top" alt="Member 4">
                         <div class="card-body">
@@ -195,7 +210,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 card-space">
                     <div class="card">
                         <img src="./Group Photo/taduran.jpg" class="card-img-top" alt="Member 5">
                         <div class="card-body">
@@ -208,7 +223,7 @@
 
         </div>
     </div>
-
+    <br><br><br><br>
     <footer>
         <div class="container">
             <p>&copy; 2024 Pokémon. © 1995–2024 Nintendo/Creatures Inc./GAME FREAK inc. Pokémon and Pokémon character names are trademarks of Nintendo.</p>
