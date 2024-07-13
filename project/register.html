@@ -1,42 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Pokémon GO Merchandise</title>
     <title>Register - Pokémon GO Merchandise</title>
 
     <link rel="shortcut icon" href="https://storage.googleapis.com/nianticweb-branding/niantic/niantic-favicon-black.png">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-         body {
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             background: url("https://static.prod.pokemon.com/images/pikachu_pattern.png");
             line-height: 1.6;
             margin: 0;
             padding: 0;
-@@ -30,9 +31,8 @@
+        }
+
+        header {
+            background: #3b4cca;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 960px;
+            margin: 0 auto;
             padding: 0 20px;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 24px;
         .pokemon-logo {
             height: 50px;
         }
 
         nav ul {
-@@ -52,23 +52,49 @@
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
         }
 
         .register-container {
-            background: #fff;
             background: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
             max-width: 500px;
             text-align: center;
             margin: 20px auto;
@@ -66,7 +85,6 @@
 
         .register-container input[type="text"],
         .register-container input[type="email"],
-        .register-container input[type="password"] {
         .register-container input[type="password"],
         .register-container input[type="date"] {
             width: calc(100% - 22px);
@@ -80,7 +98,30 @@
             width: calc(100% - 22px);
             padding: 10px;
             margin-bottom: 10px;
-@@ -99,6 +125,42 @@
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .register-container input[type="submit"] {
+            background: #3b4cca;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .register-container input[type="submit"]:hover {
+            background: #2c388e;
+        }
+
+        .register-container p {
+            margin-top: 20px;
+        }
+
+        .register-container a {
+            color: #3b4cca;
             text-decoration: none;
         }
 
@@ -123,20 +164,22 @@
         footer {
             background: #222;
             color: #fff;
-@@ -114,34 +176,58 @@
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
 <body>
     <header>
         <div class="container">
-            <h1>Pokémon GO Merchandise</h1>
             <img class="pokemon-logo" src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsite_assets%2Flogo.png&w=128&q=75" alt="Pokémon GO Logo">
             <nav>
                 <ul class="nav">
                     <li><a class="nav-link" href="index.html">Home</a></li>
-                   <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                   <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                   <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                   <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-               </ul>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
@@ -152,7 +195,6 @@
         </div>
         <h2>Register</h2>
         <form action="dashboard.html" method="POST">
-            <input type="text" name="username" placeholder="Username" required>
             <input type="text" name="first_name" placeholder="First Name" required>
             <input type="text" name="last_name" placeholder="Last Name" required>
             <select name="gender" required>
@@ -182,10 +224,15 @@
         </div>
     </div>
 
-
     <footer>
         <div class="container">
             <p>&copy; 2024 Pokémon. © 1995–2024 Nintendo/Creatures Inc./GAME FREAK inc. Pokémon and Pokémon character names are trademarks of Nintendo.</p>
             <p>All assets and information herewith are owned by Niantic Inc. Copyrights belong to them. This is for academic purposes only.</p>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
