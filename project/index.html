@@ -64,6 +64,7 @@
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%283, 3, 3, 0.5%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
         }
 
+        /* Hero section */
         #hero {
             background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
             color: #fff;
@@ -71,6 +72,7 @@
             padding: 100px 0;
         }
 
+        /* Jumbotron */
         .jumbotron-custom {
             background: #ffcc00;
             color: #3b4cca;
@@ -86,6 +88,7 @@
             font-size: 24px;
         }
 
+        /* Main content */
         .container {
             width: 80%;
             margin: 0 auto;
@@ -96,6 +99,43 @@
             margin-bottom: 30px;
         }
 
+        /* Section titles */
+        .section-title-container {
+            background-image: url('https://via.placeholder.com/1920x300');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+            padding: 60px 0;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* In-Game News */
+        #in-game-news {
+            background-color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #in-game-news .row {
+            align-items: center;
+        }
+
+        #in-game-news img {
+            max-width: 100%;
+        }
+
+        #in-game-news p {
+            font-size: 18px;
+        }
+
+        /* Footer */
         footer {
             background: #222;
             color: #fff;
@@ -234,113 +274,56 @@
 
     <main class="container">
         <section id="featured-items">
-            <h2 class="section-title">Featured Items</h2>
+            <div class="section-title-container">
+                <h2 class="section-title">Featured Items</h2>
+            </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">PokéCoins Bundle</h5>
                             <p class="card-text">Purchase PokéCoins to enhance your Pokémon GO experience.</p>
-                            <p class="card-text"><strong>Price:</strong> PHP 500 for 5,200 PokéCoins</p>
+                            <p class="card-text text-muted">Price: $9.99</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Special Event Ticket: Safari Zone</h5>
-                            <p class="card-text">Access exclusive in-game event with rare Pokémon spawns.</p>
-                            <p class="card-text"><strong>Price:</strong> PHP 300 per ticket</p>
+                            <h5 class="card-title">Pokémon Trainer Hat</h5>
+                            <p class="card-text">Look the part with this stylish Pokémon Trainer hat.</p>
+                            <p class="card-text text-muted">Price: $19.99</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Pokémon GO Plus Accessory</h5>
-                            <p class="card-text">Catch Pokémon and spin PokéStops without looking at your phone.</p>
-                            <p class="card-text"><strong>Price:</strong> PHP 1,800</p>
+                            <h5 class="card-title">Pokémon Plush Toy</h5>
+                            <p class="card-text">Snuggle up with your favorite Pokémon plush toy.</p>
+                            <p class="card-text text-muted">Price: $29.99</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="best-sellers" class="mt-5">
-            <h2 class="section-title">Best Sellers</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Item 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Item 1</h5>
-                            <p class="card-text">This is the description of item 1.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Item 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Item 2</h5>
-                            <p class="card-text">This is the description of item 2.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Item 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Item 3</h5>
-                            <p class="card-text">This is the description of item 3.</p>
-                        </div>
-                    </div>
-                </div>
+        <section id="in-game-news">
+            <div class="section-title-container">
+                <h2 class="section-title">In-Game News</h2>
             </div>
-        </section>
-
-        <section id="exclusive-offers" class="mt-5">
-            <h2 class="section-title">Exclusive Offers</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Offer 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Offer 1</h5>
-                            <p class="card-text">This is the description of offer 1.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Offer 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Offer 2</h5>
-                            <p class="card-text">This is the description of offer 2.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Offer 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Offer 3</h5>
-                            <p class="card-text">This is the description of offer 3.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="in-game-news" class="mt-5">
-            <h2 class="section-title">In-Game News</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <img src="https://via.placeholder.com/540x360" class="img-fluid" alt="In-Game News">
+                    <img src="https://via.placeholder.com/600x400" alt="In-Game News Image">
                 </div>
                 <div class="col-md-6">
-                    <p>Stay updated with the latest in-game news and events happening in Pokémon GO. Don't miss out on
-                        special events, new features, and exclusive items.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis est nec lectus tempus, eu
+                        tempor nunc auctor. Duis in efficitur elit. Vivamus eleifend justo nec suscipit fermentum. Fusce
+                        mollis sed nisl nec congue. Nam at lacus vehicula, suscipit justo eget, ultrices velit. Integer
+                        quis efficitur libero. Nulla facilisi.</p>
+                    <p>Morbi tincidunt nisi a luctus vestibulum. Nam hendrerit nunc felis, eu sagittis est luctus ut.
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        Mauris eget faucibus orci. In ullamcorper auctor elit, at rutrum lorem auctor non.</p>
                 </div>
             </div>
         </section>
@@ -350,60 +333,36 @@
         <div class="footer-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
-                        <h4>About Us</h4>
+                    <div class="col-md-4">
+                        <h3>Contact Us</h3>
                         <ul>
-                            <li><a href="#">Our Story</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
+                            <li>Phone: +1-234-5678</li>
+                            <li>Email: info@pokegowebstore.com</li>
                         </ul>
                     </div>
-                    <div class="col-md-3">
-                        <h4>Customer Service</h4>
-                        <ul>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Shipping Information</a></li>
-                            <li><a href="#">Return Policy</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
+                    <div class="col-md-4">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <h4>Follow Us</h4>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
-                        </ul>
+                    <div class="col-md-4">
+                        <h3>About Pokémon GO Webstore</h3>
+                        <p>Your one-stop shop for all things Pokémon GO!</p>
                     </div>
-                    <div class="col-md-3">
-                        <h4>Newsletter</h4>
-                        <p>Sign up for our newsletter to get the latest updates and offers.</p>
-                        <form>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Enter your email">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="footer-logo">
-                    <img src="https://via.placeholder.com/100x50" alt="Logo">
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2023 Pokémon GO Merchandise. All rights reserved.</p>
-                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-            </div>
+            <p>&copy; 2024 Pokémon GO Webstore. All rights reserved. Designed by Your Name</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
