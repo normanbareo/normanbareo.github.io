@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Pokémon GO Webstore</title>
+    <link href='https://static.wikia.nocookie.net/pokemongo/images/c/c1/AppIcon_Standard.png/revision/latest?cb=20220304130349' rel='icon' type='image/x-icon'/>
+    <title>Home - Pokémon GO Web Store</title>
 
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        /* Custom styles */
         body {
             font-family: Lato, sans-serif;
             line-height: 1.6;
@@ -36,16 +35,16 @@
         }
 
         .logo {
-    max-width: 80px; /* Adjust size as needed */
-    margin-right: 10px; /* Optional: Adjust spacing */
+    max-width: 80px; 
+    margin-right: 10px; 
     margin-top: -10px;
 }
 
 .store-title {
     font-size: 26px;
     margin: 0px;
-    cursor: pointer; /* Optional: Make the title clickable */
-    display: inline-block; /* Ensure the title and logo are inline */
+    cursor: pointer; 
+    display: inline-block; 
     color: #fff;
 
 }
@@ -82,7 +81,7 @@
 
  .navbar-nav {
     display: flex;
-    gap: 30px; /* Adjust the distance between the navigation items */
+    gap: 30px; 
 }
 
 .nav-link img {
@@ -91,9 +90,9 @@
 }
 
 .nav-icon {
-    width: 40px; /* Set the desired width */
-    height: 40px; /* Set the desired height */
-    margin-right: 5px; /* Adjust the space between the icon and the text */
+    width: 40px; 
+    height: 40px; 
+    margin-right: 5px; 
 }
 
         .navbar-light .navbar-nav .nav-link {
@@ -102,11 +101,11 @@
 
             .navbar-light .navbar-nav .nav-link:hover,
             .navbar-light .navbar-nav .nav-link:focus {
-                color: #ccc; /* Optional: Change hover/focus color */
+                color: #ccc; 
             }
 
 
-        /* Responsive Navbar */
+        
         .navbar-toggler {
             border: none;
         }
@@ -223,7 +222,7 @@
 }
 
 .btn-view-all:hover {
-    background-color: rgb(179, 56, 118); /* Darker shade of pink for hover effect */
+    background-color: rgb(179, 56, 118); 
     color: #fff;
 }
 
@@ -558,22 +557,23 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Select all elements with class 'btn' (Purchase buttons)
-            var purchaseButtons = document.querySelectorAll('.btn');
+    document.addEventListener('DOMContentLoaded', function() {
+        // Select all buttons within elements with class 'card-body'
+        var purchaseButtons = document.querySelectorAll('.card-body .btn');
 
-            // Loop through each button and add a click event listener
-            purchaseButtons.forEach(function(button) {
-                button.addEventListener('click', function(event) {
-                    // Prevent the default action (e.g., form submission)
-                    event.preventDefault();
+        // Loop through each button and add a click event listener
+        purchaseButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                // Prevent the default action (e.g., form submission)
+                event.preventDefault();
 
-                    // Display alert message
-                    alert('Please log in first to make a purchase.');
-                });
+                // Display alert message
+                alert('Please log in first to make a purchase.');
             });
         });
-    </script>
+    });
+</script>
+
 
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
