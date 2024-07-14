@@ -14,15 +14,16 @@
         body {
             font-family: Lato, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
+            background-color: #dfe4e7;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background: #0f224a;
+            background: #0f4f5a;
             color: #fff;
             padding: 6px 0;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         }
 
         header .container {
@@ -61,6 +62,8 @@
             font-size: 24px;
         }
 
+        
+
         .nav ul {
             list-style: none;
             display: flex;
@@ -77,10 +80,21 @@
             text-decoration: none;
         }
 
-        .nav-item img{
-            width: 20%;
-            height: auto;
-        }
+ .navbar-nav {
+    display: flex;
+    gap: 30px; /* Adjust the distance between the navigation items */
+}
+
+.nav-link img {
+    max-width: 30px;
+    height: auto;
+}
+
+.nav-icon {
+    width: 40px; /* Set the desired width */
+    height: 40px; /* Set the desired height */
+    margin-right: 5px; /* Adjust the space between the icon and the text */
+}
 
         .navbar-light .navbar-nav .nav-link {
         color: #fff;
@@ -105,6 +119,10 @@
 
 
         /* Hero section */
+        .jumbotron{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
         #hero {
             color: #fff;
             text-align: center;
@@ -114,22 +132,28 @@
 
         .carousel-caption {
             background: transparent;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 40%;
+            transform: translateY(-45%);
         }
 
         .carousel-caption h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: bold;
         }
 
         .carousel-caption p {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
         }
 
+       
         .carousel-caption .btn {
-            font-size: 1.2rem;
-            padding: 10px 20px;
+            margin-top: 30px;
+            font-size: 16px;
+            padding: 10px 30px;
+            border-radius: 40px;
+            color: white;
+            background-image: linear-gradient(to right, #7dcda2, #1ac6bf);
+            /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
         }
 
         /* Main content */
@@ -141,56 +165,85 @@
 
         .card {
             margin-bottom: 30px;
+            padding: 15px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px;
+            border-radius: 15px;
            
         }
 
         /* Section titles */
         #featured-items .section-title-container {
-            /* background-image: url('https://via.placeholder.com/1920x300');
-            background-size: cover;
-            background-position: center; */
             text-align: center;
-            color: #0f224a;
+            color: #0f4f5a;
             padding: 20px 0;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
 
         .section-title {
             font-size: 36px;
             margin-bottom: 0px;
+            font-weight: bold;
         }
 
-     /* In-Game News */
-#in-game-news {
-    padding: 60px 0;
-    margin-bottom: 30px;
+       
+
+        .card-body .btn{
+            background-image: linear-gradient(to right, #7dcda2, #1ac6bf);
+            border-radius: 40px;
+            padding: 10px 20px;
+            font-weight: bold;
+            margin-top: 25px;
+            color: #ffff; /* Black text */
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            
+          
 }
 
-#in-game-news .section-title-container {
-    background-image: url('https://via.placeholder.com/1920x300');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
+
+
+.card-text{
+    color: #1ac6bf;
+}
+
+.card-title{
+    color: #0f4f5a;
+}
+
+.btn-view-all {
+    background-color:  rgb(224, 79, 152);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px;
+    margin-bottom: 50px;
+}
+
+.btn-view-all:hover {
+    background-color: rgb(179, 56, 118); /* Darker shade of pink for hover effect */
     color: #fff;
-    padding: 60px 0;
-    margin-bottom: 30px;
 }
 
-#in-game-news .news-content {
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-    background-color: #fff;
+.text-center {
+    text-align: center;
 }
 
-#in-game-news img {
-    max-width: 100%;
+.btn-view-all img{
+    width: 30px;
     height: auto;
+    align-items: center;
 }
 
-#in-game-news p {
-    font-size: 16px;
-    text-align: left;
+        
+
+
+#pokemon-go .banner .img-fluid {
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px; 
+    margin-bottom: 100px;    
 }
        
 
@@ -288,21 +341,22 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <img src="https://img.icons8.com/?size=100&id=bar3GHatnNu6&format=png&color=FFFFFF" alt="Events Icon"> Events
+                            <a class="nav-link" href="https://pokemongolive.com/">
+                                <img class="nav-icon" src="https://img.icons8.com/?size=100&id=bar3GHatnNu6&format=png&color=FFFFFF" alt="Pokeball Icon"> Pokémon GO Live
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="login.html">
-                                <img src="https://img.icons8.com/?size=100&id=I0sDLbqSZFsF&format=png&color=FFFFFF" alt="Account Icon"> Account
+                                <img class="nav-icon" src="https://img.icons8.com/?size=100&id=I0sDLbqSZFsF&format=png&color=FFFFFF" alt="Account Icon"> Account
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="product.html">
-                                <img src="https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=FFFFFF" alt="Shop Icon"> Shop
+                                <img class="nav-icon" src="https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=FFFFFF" alt="Shop Icon"> Shop
                             </a>
                         </li> 
                     </ul>
+                    
                 </div>
             </nav>
         </div>
@@ -316,17 +370,18 @@
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="https://github.com/normanbareo/normanbareo.github.io/blob/main/project/Jumbo1.png?raw=true" alt="First slide">
                     <div class="carousel-caption d-none d-md-block">
-                        <h1 class="display-4">Welcome to the Pokémon GO Webstore!</h1>
-                        <p class="lead">Your one-stop shop for all things Pokémon GO!</p>
-                        <p><a class="btn btn-primary btn-lg" href="product.html">Shop Now</a></p>
+                        <h1 class="display-4">Welcome to the Pokémon GO Web Store!</h1>
+                        <p class="lead">
+                            The Pokémon GO Web Store offers a variety of exclusive in-game items for Pokémon GO players.<br>Users can purchase item boxes, PokéCoins, and special bundles to enhance their gameplay experience.<br>The store features limited-time offers, discounts for new purchases, and items.</p>
+                        <p><a class="btn" href="product.html">Shop Now</a></p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="https://github.com/normanbareo/normanbareo.github.io/blob/main/project/Jumbo2.png?raw=true" alt="Second slide">
                     <div class="carousel-caption d-none d-md-block">
-                        <h1 class="display-4">Welcome to the Pokémon GO Webstore!</h1>
-                        <p class="lead">Click to know more about us!</p>
-                        <p><a class="btn btn-primary btn-lg" href="about.html">About Us</a></p>
+                        <h1 class="display-4">Welcome to the Pokémon GO Web Store!</h1>
+                        <p class="lead">Discover the Story Behind the Pokémon Company, Niantic, and Certified Shifters.</p>
+                        <p><a class="btn" href="about.html">About Us</a></p>
                     </div>
                 </div>
             </div>
@@ -349,49 +404,58 @@
                 <h2 class="section-title">Featured Items</h2>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">PokéCoins Bundle</h5>
-                            <p class="card-text">Purchase PokéCoins to enhance your Pokémon GO experience.</p>
-                            <p class="card-text text-muted">Price: $9.99</p>
-                        </div>
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-5">
+                                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fweb-go-fest-raid-ticket-24-box.png&w=384&q=75" alt="Research Ticket" class="img-fluid">
+                                    </div>
+
+                                    <div class="col-md-7">
+                                        <h3 class="card-title">Ultra Raid Box</h3>
+                                        <h4 class="card-text">₱589.00</h4>
+                                        <a href="#" class="btn">Purchase Now</a>
+                                    </div>
+                                </div>
+                           
+                            </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Pokémon Trainer Hat</h5>
-                            <p class="card-text">Look the part with this stylish Pokémon Trainer hat.</p>
-                            <p class="card-text text-muted">Price: $19.99</p>
-                        </div>
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-5">
+                                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fweb-ultra-storage-box-0724.png&w=384&q=75" alt="Research Ticket" class="img-fluid">
+                                    </div>
+
+                                    <div class="col-md-7">
+                                        <h3 class="card-title">Ultra Storage Box</h3>
+                                        <h4 class="card-text">₱149.00</h4>
+                                        <a href="#" class="btn">Purchase Now</a>
+                                    </div>
+                                </div>
+                           
+                            </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Pokémon Plush Toy</h5>
-                            <p class="card-text">Snuggle up with your favorite Pokémon plush toy.</p>
-                            <p class="card-text text-muted">Price: $29.99</p>
-                        </div>
-                    </div>
-                </div>
             </div>
+            
         </section>
+
+        <section id="pink-button" class="text-center mt-4">
+            <a href="#" class="btn btn-view-all">View All <img src="https://img.icons8.com/?size=100&id=14079&format=png&color=FFFFFF" alt="right arrow" class="btn-icon"></a>
+        </section>
+        
+
     
-        <section id="in-game-news">
-            <div class="section-title-container">
-                <h2 class="section-title">Latest News</h2>
-            </div>
-            <div class="news-content">
+        <section id="pokemon-go">
+            <div class="banner">
                 <div class="row">
-                    <div class="col-md-6">
-                        <img src="https://via.placeholder.com/600x400" alt="In-Game News Image" class="img-fluid">
+                    <div class="col-md-12">
+                        <img src="https://www.trigomoran.com/wp-content/uploads/2021/06/header-pokemon-go-scaled.jpg" alt="In-Game News Image" class="img-fluid">
                     </div>
-                    <div class="col-md-6">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis est nec lectus tempus, eu tempor nunc auctor. Duis in efficitur elit. Vivamus eleifend justo nec suscipit fermentum. Fusce mollis sed nisl nec congue. Nam at lacus vehicula, suscipit justo eget, ultrices velit. Integer quis efficitur libero. Nulla facilisi.</p>
-                        <p>Morbi tincidunt nisi a luctus vestibulum. Nam hendrerit nunc felis, eu sagittis est luctus ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris eget faucibus orci. In ullamcorper auctor elit, at rutrum lorem auctor non.</p>
-                    </div>
+                   
                 </div>
             </div>
         </section>
