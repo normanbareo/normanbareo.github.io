@@ -556,24 +556,24 @@
         </div>
     </footer>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Select all buttons within elements with class 'card-body'
-        var purchaseButtons = document.querySelectorAll('.card-body .btn');
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    var purchaseButtons = document.querySelectorAll('.card-body .btn');
 
-        // Loop through each button and add a click event listener
-        purchaseButtons.forEach(function(button) {
-            button.addEventListener('click', function(event) {
-                // Prevent the default action (e.g., form submission)
-                event.preventDefault();
+    purchaseButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            
+            event.preventDefault();
 
-                // Display alert message
-                alert('Please log in first to make a purchase.');
-            });
+         
+            alert('Please log in first to make a purchase.');
+
+            window.location.href = 'login.html';
         });
     });
+});
 </script>
-
 
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
