@@ -697,7 +697,7 @@
 
 
         <section id="pink-button" class="text-center mt-4">
-            <a href="product.html" class="btn btn-back-to-top">Back to top</a>
+            <a class="btn btn-back-to-top">Back to top</a>
         </section>
         
 
@@ -732,6 +732,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
             window.location.href = 'login.html';
         });
+    });
+});
+
+window.onscroll = function() {
+    const backToTopButton = document.getElementById('pink-button');
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+};
+
+document.getElementById('pink-button').addEventListener('click', function() {
+    window.scrollTo({
+        top: 400,
+        behavior: 'smooth'
     });
 });
 </script>
