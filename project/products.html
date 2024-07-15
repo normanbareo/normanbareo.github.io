@@ -171,7 +171,7 @@
         }
 
         /* Section titles */
-        #featured-items .section-title-container {
+        #item-boxes .section-title-container, #PokéCoins .section-title-container, #daily-bundles .section-title-container {
             text-align: center;
             color: #0f4f5a;
             padding: 20px 0;
@@ -208,8 +208,7 @@
     color: #0f4f5a;
 }
 
-.btn-view-all {
-    background-color:  rgb(224, 79, 152);
+.btn-back-to-top{ background-color:  rgb(224, 79, 152);
     color: white;
     border: none;
     padding: 15px 25px;
@@ -221,7 +220,7 @@
     margin-bottom: 50px;
 }
 
-.btn-view-all:hover {
+.btn-back-to-top:hover {
     background-color: rgb(179, 56, 118); 
     color: #fff;
 }
@@ -433,7 +432,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="products.html">
+                            <a class="nav-link" href="product.html">
                                 <img class="nav-icon" src="https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=FFFFFF" alt="Shop Icon"> Shop
                             </a>
                         </li> 
@@ -456,7 +455,7 @@
                         <h1 class="display-4">Welcome to the Pokémon GO Web Store!</h1>
                         <p class="lead">
                             The Pokémon GO Web Store offers a variety of exclusive in-game items for Pokémon GO players.<br>Users can purchase item boxes, PokéCoins, and special bundles to enhance their gameplay experience.<br>The store features limited-time offers, discounts for new purchases, and items.</p>
-                        <p><a class="btn" href="products.html">Shop Now</a></p>
+                        <p><a class="btn" href="product.html">Shop Now</a></p>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -482,12 +481,31 @@
 
 
     <main class="container">
-        <section id="featured-items">
+        <section id="item-boxes">
             <div class="section-title-container">
-                <h2 class="section-title">Featured Items</h2>
+                <h2 class="section-title">Item Boxes</h2>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
+                    <div class="card">
+                         <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-5">
+                                    <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fweb-ultra-storage-box-0724.png&w=384&q=75" alt="Research Ticket" class="img-fluid">
+                                </div>
+
+                                <div class="col-md-7">
+                                        <h3 class="card-title">Ultra Storage Box</h3>
+                                        <h4 class="card-text">₱149.00</h4>
+                                        <a href="login.html" class="btn">Purchase</a>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+
+            <div class="col-md-4">
                     <div class="card">
                             <div class="card-body">
                                 <div class="row align-items-center">
@@ -505,17 +523,18 @@
                             </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+
+            <div class="col-md-4">
                     <div class="card">
                             <div class="card-body">
                                 <div class="row align-items-center">
                                     <div class="col-md-5">
-                                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fweb-ultra-storage-box-0724.png&w=384&q=75" alt="Research Ticket" class="img-fluid">
+                                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fweb-ultra-hatch-box-0724.png&w=384&q=75" alt="Research Ticket" class="img-fluid">
                                     </div>
 
                                     <div class="col-md-7">
-                                        <h3 class="card-title">Ultra Storage Box</h3>
-                                        <h4 class="card-text">₱149.00</h4>
+                                        <h3 class="card-title">Ultra Hatch Box</h3>
+                                        <h4 class="card-text">₱1,170.00</h4>
                                         <a href="login.html" class="btn">Purchase</a>
                                     </div>
                                 </div>
@@ -526,22 +545,164 @@
             
         </section>
 
+        <section id="PokéCoins">
+            <div class="section-title-container">
+                <h2 class="section-title">PokéCoins</h2>
+            </div>
+            <div class="row">
+                                <div class="col-md-4">
+                    <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-5">
+                                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xsmall.png&w=384&q=75" alt="Research Ticket" class="img-fluid">
+                                    </div>
+
+                                    <div class="col-md-7">
+                                        <h3 class="card-title">600 PokéCoins</h3>
+                                        <h4 class="card-text">₱149.00</h4>
+                                        <a href="login.html" class="btn">Purchase</a>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                    </div>
+            </div>
+
+            <div class="col-md-4">
+                    <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-5">
+                                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-small_v2.png&w=384&q=75" alt="Research Ticket" class="img-fluid">
+                                    </div>
+
+                                    <div class="col-md-7">
+                                        <h3 class="card-title">1,300 PokéCoins</h3>
+                                        <h4 class="card-text">₱289.00</h4>
+                                        <a href="login.html" class="btn">Purchase</a>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                    </div>
+                </div>
+
+            <div class="col-md-4">
+                    <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-5">
+                                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-medium_v2.png&w=384&q=75" alt="Research Ticket" class="img-fluid">
+                                    </div>
+
+                                    <div class="col-md-7">
+                                        <h3 class="card-title">2,700 PokéCoins</h3>
+                                        <h4 class="card-text">₱589.00</h4>
+                                        <a href="login.html" class="btn">Purchase</a>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                    </div>
+            </div>
+            <div class="row">
+                 <div class="col-md-4">
+                    <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-5">
+                                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-large-v2.png&w=384&q=75" alt="Research Ticket" class="img-fluid">
+                                    </div>
+
+                                    <div class="col-md-7">
+                                        <h3 class="card-title">5,600 PokéCoins</h3>
+                                        <h4 class="card-text">₱1,170.00</h4>
+                                        <a href="login.html" class="btn">Purchase</a>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                    </div>
+            </div>
+
+            <div class="col-md-4">
+                    <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-5">
+                                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xlarge.png&w=384&q=75" class="img-fluid">
+                                    </div>
+
+                                    <div class="col-md-7">
+                                        <h3 class="card-title">15,500 PokéCoins</h3>
+                                        <h4 class="card-text">₱2,950.00</h4>
+                                        <a href="login.html" class="btn">Purchase</a>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                    </div>
+                </div>
+
+
+            
+        </section>
+
+        <section id="daily-bundles">
+            <div class="section-title-container">
+                <h2 class="section-title">Daily Bundles</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                         <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-5">
+                                    <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fml_default_sku_id.png&w=384&q=75" alt="Research Ticket" class="img-fluid">
+                                </div>
+
+                                <div class="col-md-7">
+                                        <h3 class="card-title">Mystery Boxes</h3>
+                                        <h4 class="card-text">3 Daily Bundles</h4>
+                                        <a href="login.html" class="btn">Sign in to view</a>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card">
+                         <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-5">
+                                    <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fml_default_sku_id.png&w=384&q=75" alt="Research Ticket" class="img-fluid">
+                                </div>
+
+                                <div class="col-md-7">
+                                        <h3 class="card-title">Super Mystery Boxes</h3>
+                                        <h4 class="card-text">3 Daily Bundles</h4>
+                                        <a href="login.html" class="btn">Sign in to view</a>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+
+
         <section id="pink-button" class="text-center mt-4">
-            <a href="products.html" class="btn btn-view-all">View All Items</a>
+            <a href="product.html" class="btn btn-back-to-top">Back to top</a>
         </section>
         
 
     
-        <section id="pokemon-go">
-            <div class="banner">
-                <div class="row">
-                    <div class="col-md-12">
-                        <img src="https://www.trigomoran.com/wp-content/uploads/2021/06/header-pokemon-go-scaled.jpg" alt="In-Game News Image" class="img-fluid">
-                    </div>
-                   
-                </div>
-            </div>
-        </section>
+       
         
         
         
