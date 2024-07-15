@@ -432,7 +432,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="product.html">
+                            <a class="nav-link" href="products.html">
                                 <img class="nav-icon" src="https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=FFFFFF" alt="Shop Icon"> Shop
                             </a>
                         </li> 
@@ -455,7 +455,7 @@
                         <h1 class="display-4">Welcome to the Pokémon GO Web Store!</h1>
                         <p class="lead">
                             The Pokémon GO Web Store offers a variety of exclusive in-game items for Pokémon GO players.<br>Users can purchase item boxes, PokéCoins, and special bundles to enhance their gameplay experience.<br>The store features limited-time offers, discounts for new purchases, and items.</p>
-                        <p><a class="btn" href="product.html">Shop Now</a></p>
+                        <p><a class="btn" href="products.html">Shop Now</a></p>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -718,22 +718,24 @@
     </footer>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Select all buttons within elements with class 'card-body'
-        var purchaseButtons = document.querySelectorAll('.card-body .btn');
+document.addEventListener('DOMContentLoaded', function() {
+    
+    var purchaseButtons = document.querySelectorAll('.card-body .btn');
 
-        // Loop through each button and add a click event listener
-        purchaseButtons.forEach(function(button) {
-            button.addEventListener('click', function(event) {
-                // Prevent the default action (e.g., form submission)
-                event.preventDefault();
+    purchaseButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            
+            event.preventDefault();
 
-                // Display alert message
-                alert('Please log in first to make a purchase.');
-            });
+         
+            alert('Please log in first to make a purchase.');
+
+            window.location.href = 'login.html';
         });
     });
+});
 </script>
+
 
 
     
