@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Pokémon GO Web Store</title>
-     <link rel="shortcut icon" href="https://storage.googleapis.com/nianticweb-branding/niantic/niantic-favicon-black.png">
+    <link rel="shortcut icon" href="https://storage.googleapis.com/platform-webstore-rel-assets/pgo/site_assets/favicon.ico"/>
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -33,33 +34,27 @@
         }
 
         .logo {
-    max-width: 80px; 
-    margin-right: 10px; 
-    margin-top: -10px;
-}
+            max-width: 80px;
+            margin-right: 10px;
+            margin-top: -10px;
+        }
 
-.store-title {
-    font-size: 26px;
-    margin: 0px;
-    cursor: pointer; 
-    display: inline-block; 
-    color: #fff;
+        .store-title {
+            font-size: 26px;
+            margin: 0px;
+            cursor: pointer;
+            display: inline-block;
+            color: #fff;
+        }
 
-}
-
-
-.store-title:hover {
-    color: #ccc; 
-}
-
-
+        .store-title:hover {
+            color: #ccc;
+        }
 
         header h1 {
             margin: 0;
             font-size: 24px;
         }
-
-        
 
         .nav ul {
             list-style: none;
@@ -77,72 +72,75 @@
             text-decoration: none;
         }
 
- .navbar-nav {
-    display: flex;
-    gap: 30px; 
-}
-
-.nav-link img {
-    max-width: 30px;
-    height: auto;
-}
-
-.nav-icon {
-    width: 40px; 
-    height: 40px; 
-    margin-right: 5px; 
-}
-
-        .navbar-light .navbar-nav .nav-link {
-        color: #fff;
+        .navbar-nav {
+            display: flex;
+            gap: 30px;
         }
 
-            .navbar-light .navbar-nav .nav-link:hover,
-            .navbar-light .navbar-nav .nav-link:focus {
-                color: #ccc; 
-            }
+        .nav-link img {
+            max-width: 30px;
+            height: auto;
+        }
 
+        .nav-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+        }
 
-        
+        .navbar-light .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover,
+        .navbar-light .navbar-nav .nav-link:focus {
+            color: #ccc;
+        }
+
         .navbar-toggler {
             border: none;
         }
 
         .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
 
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1200px;
+            margin-bottom: 100px;
+        }
 
+        .card {
+            margin-bottom: 30px;
+            padding: 15px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px;
+            border-radius: 15px;
+        }
 
-        .content {
+        /* Section titles */
+        #Niantic .section-title-container,
+        #Nintendo .section-title-container,
+        #Cerified-Shifters .section-title-container {
+            text-align: center;
+            color: #0f4f5a;
+            padding: 20px 0;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 0px;
+            font-weight: bold;
             margin-top: 20px;
-            margin-bottom: 20px;
         }
 
-        .content h1 {
-            color: #3b4cca;
-            margin-top: 0;
+        .card-title {
+            color: #0f4f5a;
         }
 
-        .content p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .back-link {
-            margin-top: 20px;
-        }
-
-        .back-link a {
-            color: #3b4cca;
-            text-decoration: none;
-        }
-
-        .back-link a:hover {
-            text-decoration: underline;
-        }
-
-       footer {
+        footer {
             background: #0f4f5a;
             color: #fff;
             text-align: center;
@@ -152,48 +150,19 @@
         footer p {
             margin: 0;
         }
-
-        .card {
-            margin: 20px 0;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card img {
-            max-width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card-body {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-grow: 1;
-        }
-
-        .group h1 {
-            color: #3b4cca;
-            margin-top: 0;
-        }
-
-        .card-space {
-            margin-bottom: 20px;
-        }
     </style>
 </head>
+
 <body>
-     <header>
+    <header>
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="https://github.com/normanbareo/normanbareo.github.io/blob/main/project/Pok%C3%A9mon_GO.png?raw=true" alt="Pokemon Go Logo" class="logo"> 
+                <img src="https://github.com/normanbareo/normanbareo.github.io/blob/main/project/Pok%C3%A9mon_GO.png?raw=true" alt="Pokemon Go Logo" class="logo">
                 <h1 class="store-title">Web Store</h1>
             </a>
             <nav class="navbar navbar-expand-lg navbar-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon" style="background-image: url(&quot;data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E&quot;);"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -212,101 +181,207 @@
                             <a class="nav-link" href="products.html">
                                 <img class="nav-icon" src="https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=FFFFFF" alt="Shop Icon"> Shop
                             </a>
-                        </li> 
+                        </li>
                     </ul>
-                    
+
                 </div>
             </nav>
         </div>
     </header>
-    <div class="container">
-        <div class="content">
-            <h1>About Pokémon GO Merchandise</h1>
-            <p>Welcome to Pokémon GO Merchandise, your one-stop shop for Pokémon-themed merchandise and apparel. We bring you a wide range of products inspired by the Pokémon universe, from clothing and accessories to collectibles and more.</p>
-            <p>Our mission is to provide fans with high-quality merchandise that celebrates their love for Pokémon. Whether you're a seasoned Trainer or just starting your journey, we have something for everyone.</p>
-            <p>Explore our store, discover new arrivals, and find the perfect gear to express your passion for Pokémon!</p>
-            <div class="back-link">
-                <a href="index.html">Back to Home</a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="content">
-            <h1>About Niantic</h1>
-            <p>Niantic, Inc. is an American software development company based in San Francisco. It is best known for developing the augmented reality mobile games Ingress, Pokémon GO, and Harry Potter: Wizards Unite.</p>
-            <p>Niantic's mission is to build augmented reality experiences that encourage outdoor exploration and social interaction.</p>
-            <div class="back-link">
-                <a href="index.html">Back to Home</a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="content">
-            <h1>About Nintendo</h1>
-            <p>Nintendo Co., Ltd. is a Japanese multinational consumer electronics and video game company headquartered in Kyoto. The company was founded in 1889 and is known for creating some of the most popular and iconic video game franchises in history.</p>
-            <p>Nintendo's mission is to put smiles on the faces of everyone they touch by creating unique entertainment experiences that appeal to people of all ages.</p>
-            <div class="back-link">
-                <a href="index.html">Back to Home</a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="group">
-            <h1>About Our Group</h1>
-            <div class="row">
-                <div class="col-md-4 card-space">
-                    <div class="card">
-                        <img src="./Group Photo/Norman.jpg" class="card-img-top" alt="Member 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Norman Bareo</h5>
-                            <p class="card-text">Lead Programmer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 card-space">
-                    <div class="card">
-                        <img src="./Group Photo/Jericho.jpg" class="card-img-top" alt="Member 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Jericho Santos</h5>
-                            <p class="card-text">One of the coders of this page and login page</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 card-space">
-                    <div class="card">
-                        <img src="./Group Photo/Hafalla.jpg" class="card-img-top" alt="Member 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Luis Hafalla</h5>
-                            <p class="card-text">Coder of the Product page and About page</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 card-space">
-                    <div class="card">
-                        <img src="./Group Photo/Larracas.jpeg" class="card-img-top" alt="Member 4">
-                        <div class="card-body">
-                            <h5 class="card-title">Mico Larracas</h5>
-                            <p class="card-text">One of the coders of this page and register page</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 card-space">
-                    <div class="card">
-                        <img src="./Group Photo/taduran.jpg" class="card-img-top" alt="Member 5">
-                        <div class="card-body">
-                            <h5 class="card-title">Miggy Taduran</h5>
-                            <p class="card-text">One of the coders of this project and landing page</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-    </div>
-    <br><br><br><br>
-     <footer>
+    <main class="container">
+        <section id="Niantic">
+            <div class="section-title-container">
+                <h2 class="section-title">About Us</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-5">
+                                    <img src="https://images.pond5.com/editorial-niantic-inc-logo-glass-footage-087202349_iconl.jpeg"
+                                        alt="Niantic" class="img-fluid">
+                                </div>
+
+                                <div class="col-md-7">
+                                    <h3 class="card-title">Niantic, Inc.</h3>
+                                    <p>Niantic, Inc. is an American software development company based in San Francisco. It is best known for developing the augmented reality mobile games Ingress, Pokémon GO, and Harry Potter: Wizards Unite.</p>
+                                    <p>Niantic's mission is to build augmented reality experiences that encourage outdoor exploration and social interaction.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Nintendo">
+            <!-- <div class="section-title-container">
+                <h2 class="section-title">About Nintendo</h2>
+            </div> -->
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-5">
+                                    <img src="https://www.videogameschronicle.com/files/2021/02/nintendo.original-e1613583479805.jpg"
+                                        alt="Nintendo" class="img-fluid">
+                                </div>
+
+                                <div class="col-md-7">
+                                    <h3 class="card-title">Nintendo Co., Ltd.</h3>
+                                    <p>Nintendo Co., Ltd. is a Japanese multinational consumer electronics and video game company headquartered in Kyoto. It is one of the world's largest video game companies by market capitalization, creating some of the best-known and top-selling video game franchises, such as Mario, The Legend of Zelda, and Pokémon.</p>
+                                    <p>Nintendo is also the creator of Pokémon, which is jointly owned by Nintendo, Game Freak, and Creatures.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="Certified-Shifters">
+            <!-- <div class="section-title-container">
+                <h2 class="section-title">About Nintendo</h2>
+            </div> -->
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-5">
+                                    <img src="https://github.com/normanbareo/normanbareo.github.io/blob/main/project/FEU-IT.jpg?raw=true"
+                                        alt="FEU" class="img-fluid">
+                                </div>
+
+                                <div class="col-md-7">
+                                    <h3 class="card-title">Certified Shifters - TC02</h3>
+                                    <p>Certified Shifters is a group of five IT students from FEU - Institute of Technology: Norman Bareo, Luis Habon, Mico Larracas, Jericho Santos, and Miguel Taduran."</p>
+                                    <p>The group is currently enrolled in a course named IT0043: Web Design with Client-Side Scripting. They have been tasked with redesigning the Pokémon GO Web Store as part of the final project for the course. </p>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="Certified-Shifters">
+            <!-- <div class="section-title-container">
+                <h2 class="section-title">About Nintendo</h2>
+            </div> -->
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <img src="https://github.com/normanbareo/normanbareo.github.io/blob/main/project/Group%20Photo/Norman.jpg?raw=true"
+                                        alt="Bareo" class="img-fluid">
+                                </div>
+
+                                <div class="col-md-7">
+                                    <h4 class="card-title">Norman Bareo</h4>
+                                    <h5>Leader</h5>
+                                    <p>Bareo designed the about, landing, and product web pages. He also finalized all the web page design. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <img src="https://github.com/normanbareo/normanbareo.github.io/blob/main/project/Group%20Photo/Hafalla.jpg?raw=true"
+                                        alt="Habon" class="img-fluid">
+                                </div>
+
+                                <div class="col-md-7">
+                                    <h4 class="card-title">Luis Habon</h4>
+                                    <h5>Member</h5>
+                                    <p>Habon designed the initial about web page. </p>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <img src="https://github.com/normanbareo/normanbareo.github.io/blob/main/project/Group%20Photo/Larracas.jpeg?raw=true"
+                                        alt="Larracas" class="img-fluid">
+                                </div>
+
+                                <div class="col-md-7">
+                                    <h4 class="card-title">Mico Larracas</h4>
+                                    <h5>Member</h5>
+                                    <p></p>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <img src="https://github.com/normanbareo/normanbareo.github.io/blob/main/project/Group%20Photo/Jericho.jpg?raw=true"
+                                        alt="Santos" class="img-fluid">
+                                </div>
+
+                                <div class="col-md-7">
+                                    <h4 class="card-title">Jericho Santos</h4>
+                                    <h5>Member</h5>
+                                    <p>Santos designed the initial login web page. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <img src="https://github.com/normanbareo/normanbareo.github.io/blob/main/project/Group%20Photo/taduran.jpg?raw=true"
+                                        alt="Habon" class="img-fluid">
+                                </div>
+
+                                <div class="col-md-7">
+                                    <h4 class="card-title">Miguel Taduran</h4>
+                                    <h5>Member</h5>
+                                    <p>Taduran designed the initial registration web page. </p>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <div class="footer">
-            <p> © 2024 Pokémon. © 1995–2024 Nintendo/Creatures Inc./GAME FREAK inc.</p> 
+            <p>© 2024 Pokémon. © 1995–2024 Nintendo/Creatures Inc./GAME FREAK inc.</p>
             <p>All assets and information here are owned by Niantic Inc. Copyrights belong to them.</p>
             <p>This is for academic purposes only.</p>
         </div>
@@ -316,4 +391,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
