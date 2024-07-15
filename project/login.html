@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="shortcut icon" href="https://storage.googleapis.com/platform-webstore-rel-assets/pgo/site_assets/favicon.ico"/>
+    <link rel="shortcut icon"
+        href="https://storage.googleapis.com/platform-webstore-rel-assets/pgo/site_assets/favicon.ico" />
     <title>Login - Pokémon GO Web Store</title>
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -34,33 +35,22 @@
         }
 
         .logo {
-    max-width: 80px; /* Adjust size as needed */
-    margin-right: 10px; /* Optional: Adjust spacing */
-    margin-top: -10px;
-}
-
-.store-title {
-    font-size: 26px;
-    margin: 0px;
-    cursor: pointer; /* Optional: Make the title clickable */
-    display: inline-block; /* Ensure the title and logo are inline */
-    color: #fff;
-
-}
-
-
-.store-title:hover {
-    color: #ccc; 
-}
-
-
-
-        header h1 {
-            margin: 0;
-            font-size: 24px;
+            max-width: 80px;
+            margin-right: 10px;
+            margin-top: -10px;
         }
 
-        
+        .store-title {
+            font-size: 26px;
+            margin: 0px;
+            cursor: pointer;
+            display: inline-block;
+            color: #fff;
+        }
+
+        .store-title:hover {
+            color: #ccc;
+        }
 
         .nav ul {
             list-style: none;
@@ -78,56 +68,54 @@
             text-decoration: none;
         }
 
- .navbar-nav {
-    display: flex;
-    gap: 30px; /* Adjust the distance between the navigation items */
-}
-
-.nav-link img {
-    max-width: 30px;
-    height: auto;
-}
-
-.nav-icon {
-    width: 40px; /* Set the desired width */
-    height: 40px; /* Set the desired height */
-    margin-right: 5px; /* Adjust the space between the icon and the text */
-}
-
-        .navbar-light .navbar-nav .nav-link {
-        color: #fff;
+        .navbar-nav {
+            display: flex;
+            gap: 30px;
         }
 
-            .navbar-light .navbar-nav .nav-link:hover,
-            .navbar-light .navbar-nav .nav-link:focus {
-                color: #ccc; /* Optional: Change hover/focus color */
-            }
+        .nav-link img {
+            max-width: 30px;
+            height: auto;
+        }
 
+        .nav-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+        }
 
-        /* Responsive Navbar */
+        .navbar-light .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover,
+        .navbar-light .navbar-nav .nav-link:focus {
+            color: #ccc;
+        }
+
         .navbar-toggler {
             border: none;
         }
 
         .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
 
         .login-container {
             background: #fff;
-            padding: 20px;
+            padding: 25px;
             border-radius: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 400px;
             text-align: center;
-            margin: 20px auto;
+            margin: 30px auto;
         }
 
         .login-container h2 {
             margin-bottom: 20px;
             color: #0f4f5a;
             font-weight: bold;
+            margin-top: 20px;
         }
 
         .login-container input[type="text"],
@@ -144,9 +132,10 @@
             color: #fff;
             padding: 10px;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px;
             cursor: pointer;
-            width: 100%;
+            width: 95%;
+            margin-top: 20px;
         }
 
         .login-container p {
@@ -154,12 +143,17 @@
         }
 
         .login-container a {
-            color: #3b4cca;
             text-decoration: none;
-            
+            color: #1ac6bf;
         }
 
-         footer {
+        .remember-me {
+            text-align: left;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        footer {
             background: #0f4f5a;
             color: #fff;
             text-align: center;
@@ -173,58 +167,69 @@
 </head>
 
 <body>
-     <header>
+    <header>
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="https://github.com/normanbareo/normanbareo.github.io/blob/main/project/Pok%C3%A9mon_GO.png?raw=true" alt="Pokemon Go Logo" class="logo"> 
+                <img src="https://github.com/normanbareo/normanbareo.github.io/blob/main/project/Pok%C3%A9mon_GO.png?raw=true"
+                    alt="Pokemon Go Logo" class="logo">
                 <h1 class="store-title">Web Store</h1>
             </a>
             <nav class="navbar navbar-expand-lg navbar-light">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" style="background-image: url(&quot;data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E&quot;);"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="https://pokemongolive.com/">
-                                <img class="nav-icon" src="https://img.icons8.com/?size=100&id=bar3GHatnNu6&format=png&color=FFFFFF" alt="Pokeball Icon"> Pokémon GO Live
+                            <a class="nav-link"
+                                href="https://pokemongolive.com/">
+                                <img class="nav-icon"
+                                    src="https://img.icons8.com/?size=100&id=bar3GHatnNu6&format=png&color=FFFFFF"
+                                    alt="Pokeball Icon"> Pokémon GO Live
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">
-                                <img class="nav-icon" src="https://img.icons8.com/?size=100&id=I0sDLbqSZFsF&format=png&color=FFFFFF" alt="Account Icon"> Account
+                            <a class="nav-link"
+                                href="login.html">
+                                <img class="nav-icon"
+                                    src="https://img.icons8.com/?size=100&id=I0sDLbqSZFsF&format=png&color=FFFFFF"
+                                    alt="Account Icon"> Account
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="product.html">
-                                <img class="nav-icon" src="https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=FFFFFF" alt="Shop Icon"> Shop
+                            <a class="nav-link"
+                                href="products.html">
+                                <img class="nav-icon"
+                                    src="https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=FFFFFF"
+                                    alt="Shop Icon"> Shop
                             </a>
-                        </li> 
+                        </li>
                     </ul>
-                    
+
                 </div>
             </nav>
         </div>
     </header>
     <div class="login-container">
-        <img src="https://upload.wikimedia.org/wikipedia/en/4/46/Pokemon_Go.png" alt="Pokemon Go logo" width="100px"><p></p>
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/46/Pokemon_Go.png" alt="Pokemon Go logo" width="100px">
         <h2>Login</h2>
         <form action="dashboard.html" method="POST">
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
-                <div class="checkbox">
-                    <input type="checkbox" name="remember me" id="Remember me" value="Remember me">Remember me</input>
-                </div>
+            <div class="form-group form-check remember-me">
+                <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
+                <label class="form-check-label" for="rememberMe">Remember me</label>
+            </div>
             <input type="submit" value="Login">
         </form>
         <p>Don't have an account? <a href="register.html" style="color: #1ac6bf">Register here</a></p>
     </div>
 
 
-     <footer>
+    <footer>
         <div class="footer">
-            <p> © 2024 Pokémon. © 1995–2024 Nintendo/Creatures Inc./GAME FREAK inc.</p> 
+            <p> © 2024 Pokémon. © 1995–2024 Nintendo/Creatures Inc./GAME FREAK inc.</p>
             <p>All assets and information here are owned by Niantic Inc. Copyrights belong to them.</p>
             <p>This is for academic purposes only.</p>
         </div>
