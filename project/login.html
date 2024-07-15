@@ -101,6 +101,22 @@
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
         }
 
+        .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .niantic-logo {
+            height: 30px;
+            margin-right: 20px;
+        }
+
+        .pokemon-logo {
+            height: 50px;
+        }
+
         .login-container {
             background: #fff;
             padding: 25px;
@@ -136,6 +152,10 @@
             cursor: pointer;
             width: 95%;
             margin-top: 20px;
+        }
+
+        .login-container input[type="submit"]:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         }
 
         .login-container p {
@@ -212,7 +232,10 @@
         </div>
     </header>
     <div class="login-container">
-        <img src="https://upload.wikimedia.org/wikipedia/en/4/46/Pokemon_Go.png" alt="Pokemon Go logo" width="100px">
+        <div class="logos">
+            <img class="niantic-logo" src="https://storage.googleapis.com/nianticweb-branding/niantic/niantic-horizontal-black.svg" alt="Niantic Logo">
+            <img class="pokemon-logo" src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsite_assets%2Flogo.png&w=128&q=75" alt="Pokémon GO Logo">
+        </div>
         <h2>Login</h2>
         <form action="dashboard.html" method="POST">
             <input type="text" name="username" placeholder="Username" required>
