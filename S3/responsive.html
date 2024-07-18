@@ -1,1 +1,595 @@
-dddddd
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S3 - Responsive Service Web Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  
+
+
+  <style>
+    body {
+  font-family: 'Roboto';
+  background-color: #303438; 
+  color: #ffffff; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+    @font-face {
+    font-family: 'Helvetica Neue LT Pro', sans-serif;
+    src: url('https://lh3.googleusercontent.com/d/17MjtE0ywIeA4Ww__oVSAN5c4qK5gPjUz') format('truetype');
+    font-weight: 900;
+    font-stretch: expanded; 
+}
+    .navbar {
+      background-color: #1a1e22; 
+      padding: 15px;
+    }
+    .navbar .navbar-brand, .navbar .nav-link {
+      color: #ffffff; 
+    }
+
+    .nav-link{
+        font-size: 13px;
+     
+        margin-right: 20px;
+        letter-spacing: 3px;
+    }
+
+    .navbar-brand {
+        font-family: 'Helvetica Neue LT Pro', sans-serif;
+  
+    }
+
+    .navbar .nav-link:hover {
+      color: #a3a3a3; 
+    }
+    .jumbotron {
+      background-image: url('https://lh3.googleusercontent.com/d/1kCo3hOeL1kj_wbJzRtJWbOzkRdjKCeW1'); 
+      background-position-y: -270px;
+      background-size: cover;
+      color: #ffffff; 
+      height: 500px; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center; 
+      position: relative; 
+    }
+    .jumbotron h4 {
+        font-family: 'Roboto';
+      font-size: 1.5rem; 
+      margin-bottom: 0.5rem; 
+      letter-spacing: 2px;
+    }
+    .jumbotron h1 {
+      font-size: 4rem; 
+      font-family: 'Helvetica Neue LT Pro', sans-serif;
+      margin-top: 0;
+    }
+    .jumbotron p{
+      font-size: 20px;
+    }
+    .service-title{
+      font-size: 45px; 
+      text-align: center;
+      margin-bottom: 10px; 
+      margin-top: 40px;
+      font-family: 'Roboto';
+      font-weight: bold;
+      
+    }
+
+    .inquiry-title{
+      font-size: 45px; 
+      text-align: center;
+      margin-bottom: 10px; 
+      margin-top: 20px;
+      font-family: 'Roboto';
+      font-weight: bold;
+      
+    }
+    .service-subtitle, .inquiry-subtitle {
+      font-size: 18px; 
+      text-align: center;
+      margin-bottom: 40px; 
+    }
+    .service-box {
+      border: 2px solid #ffffff; 
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      background-color: transparent; 
+      color: #ffffff; 
+      cursor: pointer; 
+      transition: all 0.3s ease; 
+    }
+    .service-box:hover {
+      transform: translateY(-5px); 
+    }
+    .service-box h2 {
+      margin-bottom: 15px;
+      font-family: 'Roboto';
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .service-box p {
+      margin-bottom: 15px;
+      
+    }
+    .service-box img {
+      width: 80px;
+      height: 80px; 
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px; 
+      margin-top: 20px;
+    }
+
+    .service-box-details ul {
+  list-style-position: outside; 
+  padding-left: 1em; 
+  text-align: left; 
+  margin: 12px;
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+
+    .service-box-details {
+      display: none; 
+    }
+    .service-box.active {
+      background-color: rgba(255, 255, 255, 0.2); 
+      border-color: #ffffff; 
+      color: #ffffff; 
+    }
+
+
+    .footer {
+  background-color: #1a1e22; 
+  color: #ffffff;
+  padding: 20px 0;
+  margin-top: auto; 
+  width: 100%; 
+}
+    .footer a {
+      color: #ffffff; 
+    }
+    
+
+    
+    .navbar-toggler {
+      border: none; 
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .job-title {
+      height: 1.5em; 
+      overflow: hidden;
+      text-align: center;
+    
+      letter-spacing: 2px;
+    }
+    .job-title p {
+      display: none;
+      margin: 0;
+    }
+    .job-title p.active {
+      display: block;
+    }
+
+    .view-portfolio {
+      background-color: gray; 
+      color: #ffffff; 
+      border: none;
+      padding: 10px 20px;
+      margin-top: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease; 
+    }
+    .view-portfolio:hover, ..view-portfolio:focus {
+      background-color: #ffffff;
+      color: #343a40; 
+    }
+
+    
+    #contactForm {
+      
+      color:  #ffffff; 
+      padding: 10px;
+      border-radius: 0; 
+      border: none; 
+    }
+    #contactForm label {
+      color: #ffffff; 
+    }
+    #contactForm .form-control {
+      border: 2px solid  #ffffff; 
+      border-radius: 0; 
+      background-color: transparent; 
+      color:  #ffffff; 
+    }
+    #contactForm .form-control option {
+      color: #1a1e22; 
+    }
+    #contactForm button[type="submit"] {
+      background-color: gray; 
+      color: #ffffff; 
+      border: none;
+      width: 10%; 
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: all 0.3s ease; 
+      margin: 0 auto; 
+      display: block;
+      margin-bottom: 40px;
+      margin-top: 40px;
+    }
+    #contactForm button[type="submit"]:hover {
+      background-color: #ffffff; 
+      color: #343a40; 
+    }
+
+    @media (max-width: 992px) {
+    .jumbotron h4 {
+        font-size: 1.25rem; 
+    }
+
+    .jumbotron h1 {
+        font-size: 3rem; 
+    }
+
+    .job-title {
+        font-size: 0rem; 
+    }
+
+    #contactForm button[type="submit"] {
+     
+     width: 17%; 
+
+
+}
+}
+
+@media (max-width: 768px) {
+    .jumbotron h4 {
+        font-size: 1rem; 
+    }
+
+    .jumbotron h1 {
+        font-size: 2.5rem; 
+    }
+
+    .job-title {
+        font-size: 0rem; 
+    }
+
+    #contactForm button[type="submit"] {
+     
+     width: 15%; 
+
+
+}
+}
+
+@media (max-width: 576px) {
+    .jumbotron h4 {
+        font-size: 0.875rem; 
+    }
+
+    .jumbotron h1 {
+        font-size: 2.3rem; 
+    }
+
+    .job-title {
+        font-size: 0rem; 
+    }
+
+    #contactForm button[type="submit"] {
+     
+      width: 30%; 
+    
+      
+    }
+}
+  </style>
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <div class="row w-100">
+        <div class="col-md-4">
+          <a class="navbar-brand" href="#">NORMAN BAREO</a>
+        </div>
+        <div class="col-md-8">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SERVICES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">PORTFOLIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+ <div class="jumbotron jumbotron-fluid text-center">
+  <div class="container">
+    <h4>HELLO, I AM...</h4>
+    <h1>NORMAN BAREO</h1>
+    <div class="job-title">
+      <p class="active">MULTIMEDIA ARTIST</p>
+      <p>MULTIMEDIA ARTIST | WEB DEVELOPER</p>
+      <p>MULTIMEDIA ARTIST | WEB DEVELOPER | MARKETING SPECIALIST</p>
+    </div>
+    <button class="view-portfolio">View Portfolio</button>
+  </div>
+</div>
+
+  <section id="SERVICE">
+    <div class="container">
+      <h2 class="service-title">CHOOSE A SERVICE</h2>
+      <p class="service-subtitle">I have tailored service package to meet your needs</p>
+      
+       <div class="row text-center">
+     
+      <div class="col-md-4">
+        <div class="service-box" data-service="Graphic Design">
+          <img src="https://img.icons8.com/?size=100&id=TNMFlPDNS18k&format=png&color=FFFFFF" alt="Graphic Design" class="img-fluid">
+          <h2>Graphic Design</h2>
+          <p>Starts at ₱15,000</p>
+          <div class="service-box-details" data-details="Graphic Design details">
+          <ul>
+            <li>Custom graphics for print and digital media</li>
+            <li>Photo editing and retouching</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box" data-service="Visual Brand Identity">
+          <img src="https://img.icons8.com/?size=100&id=8172&format=png&color=FFFFFF" alt="Visual Brand Identity" class="img-fluid">
+          <h2>Visual Brand Identity</h2>
+          <p>Starts at ₱20,000</p>
+          <div class="service-box-details" data-details="Visual Brand Identity details">
+            <ul>
+                <li>Brand style and logo development</li>
+                <li>Visual assets for brand representation</li>
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box" data-service="Web Development">
+          <img src="https://img.icons8.com/?size=100&id=12486&format=png&color=FFFFFF" alt="Web Development" class="img-fluid">
+          <h2>Web Development</h2>
+          <p>Starts at ₱20,000</p>
+          <div class="service-box-details" data-details="Web Development details">
+            <ul>
+                <li>Responsive website design</li>
+                <li>Front-end development</li>
+            </ul>
+           
+          </div>
+        </div>
+      </div>
+     
+      <div class="col-md-4">
+        <div class="service-box" data-service="Event Media Coverage">
+          <img src="https://img.icons8.com/?size=100&id=MRZg41dxvuQk&format=png&color=FFFFFF" alt="Event Media Coverage" class="img-fluid">
+          <h2>Event Media Coverage</h2>
+          <p>Starts at ₱20,000</p>
+          <div class="service-box-details" data-details="Event Media Coverage details">
+            <ul>
+                <li>Live event photography and videography</li>
+                <li>Post-event editing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box" data-service="Video Editing">
+          <img src="https://img.icons8.com/?size=100&id=Xcxm3LVazS7z&format=png&color=FFFFFF" alt="Video Editing" class="img-fluid">
+          <h2>Video Editing</h2>
+          <p>Starts at ₱20,000</p>
+          <div class="service-box-details" data-details="Video Editing details">
+            <ul>
+              <li>Professional video editing</li>
+              <li>Special effects and motion graphics</li>
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box" data-service="Social Media Marketing">
+          <img src="https://img.icons8.com/?size=100&id=lEDHtWo9fVxM&format=png&color=FFFFFF" alt="Social Media Marketing" class="img-fluid">
+          <h2>Social Media Marketing</h2>
+          <p>Starts at ₱25,000</p>
+          <div class="service-box-details" data-details="Social Media Marketing details">
+            <ul>
+                <li>Strategic social media campaigns</li>
+                <li>Analytics and performance tracking</li>
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </section>
+  
+
+ <section id="INQUIRY">
+  <div class="container mt-5">
+    <h2 class="inquiry-title">GET IN TOUCH</h2>
+    <p class="inquiry-subtitle">Tell me a little about your project and I’ll connect with you within 24 hours.</p>
+    <form id="contactForm" method="POST" action="submit.php">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="fullName">Name<span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="fullName" name="fullName" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="email">Email Address<span class="text-danger">*</span></label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="phone">Contact Number<span class="text-danger">*</span></label>
+          <input type="tel" class="form-control" id="phone" name="phone">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="location">Location</label>
+          <input type="text" class="form-control" id="location" name="location">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="organization">Organization</label>
+          <input type="text" class="form-control" id="organization" name="organization">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="website">Website</label>
+          <input type="url" class="form-control" id="website" name="website">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="budget">Approximate Budget<span class="text-danger">*</span></label>
+          <select class="form-control" id="budget" name="budget" required>
+            <option value="">Select budget range</option>
+            <option value="$1000 - $5000">$1000 - $5000</option>
+            <option value="$5000 - $10000">$5000 - $10000</option>
+            <option value="$10000 - $20000">$10000 - $20000</option>
+            <option value="$20000+">$20000+</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="service">Service<span class="text-danger">*</span></label>
+          <select class="form-control" id="service" name="service" required>
+            <option value="">Select a service package</option>
+            <option value="Graphic Design">Graphic Design</option>
+            <option value="Visual Brand Identity">Visual Brand Identity</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Event Media Coverage">Event Coverage</option>
+            <option value="Video Editing">Video Production</option>
+            <option value="Social Media Marketing">Social Media Marketing</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="comment">Project Summary<span class="text-danger">*</span></label>
+        <textarea class="form-control" id="comment" name="comment" rows="5"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+ </section>
+  
+
+ 
+  <footer class="footer text-center">
+    <div class="container">
+      <p>&copy; 2024 Norman Patrick Bareo. All rights reserved.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        <li class="list-inline-item"><a href="#">Terms of Service</a></li>
+        <li class="list-inline-item"><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+
+ 
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      
+      document.querySelectorAll('.service-box').forEach(function(plan) {
+        plan.addEventListener('click', function() {
+          if (this.classList.contains('active')) {
+          
+            this.classList.remove('active');
+            var details = this.querySelector('.service-box-details');
+            details.style.display = 'none';
+            document.getElementById('service').selectedIndex = 0; 
+          } else {
+          
+            document.querySelectorAll('.service-box').forEach(function(plan) {
+              plan.classList.remove('active');
+            });
+           
+            this.classList.add('active');
+          
+            document.querySelectorAll('.service-box-details').forEach(function(detail) {
+              detail.style.display = 'none';
+            });
+         
+            var details = this.querySelector('.service-box-details');
+            details.style.display = 'block';
+          
+            var serviceName = this.getAttribute('data-service');
+            var serviceOptions = document.getElementById('service').options;
+            for (var i = 0; i < serviceOptions.length; i++) {
+              if (serviceOptions[i].text.startsWith(serviceName)) {
+                document.getElementById('service').selectedIndex = i;
+                break;
+              }
+            }
+          }
+        });
+      });
+  
+     
+      let currentIndex = 0;
+      const texts = document.querySelectorAll(".job-title p");
+      setInterval(() => {
+        texts[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % texts.length;
+        texts[currentIndex].classList.add("active");
+      }, 4000);
+    });
+  </script>
+  
+</body>
+</html>
