@@ -28,7 +28,6 @@
             padding: 0;
         }
 
-        
         /* LEFT COLUMN */
         .left-column {
             background: url('https://lh3.googleusercontent.com/d/16IBjA6U130QVwK9S91dk0veY-655Q0Bg') repeat-y center center fixed;
@@ -168,6 +167,7 @@
             background-color: #004b1c;
         }
 
+        /* FOOOTER */
         footer {
             background-color: #f4f4f4;
             padding-top: 10px;
@@ -178,28 +178,50 @@
             border-top: 1.5px dotted #b6b6b6;
             display: flex;
             justify-content: space-between;
+            vertical-align: auto;
          
         }
 
-        .left{
+        .left a{
             color: #b6b6b6;
             font-size: 10px;
         }
 
-        .right{
-            font-size: 10px;
-            color: #b6b6b6;
+
+        .social-media-links a {
+            color:  #f4f4f4;
+          
         }
 
+        .X, .Facebook, .YouTube{
+            width: 20px;
+            margin-right: 15px;
+        }
 
+        .social-media-links a img:hover {
+            filter: brightness(0) saturate(100%) invert(60%) sepia(9%) saturate(271%) hue-rotate(333deg) brightness(91%) contrast(104%);
+        }
 
+        .left a:hover, .right a:hover{
+            color: #988989;
+        }
+
+        /* iPad Pro 12.9 Horizontal */
+        @media (min-width: 1366px) and (min-height: 1024px ){
+            button {
+            margin-bottom: 500px;
+            
+        }
+
+        }
+            
+        
 
     </style>
 </head>
 
 <body>
-    <div class="container-fluid">
-
+    <div class="container-fluid desktop">
         <!-- Left Column -->
             <div class="row">
                     <div class="col-lg-6 left-column">       
@@ -266,14 +288,22 @@
                         </div>
 
                         <footer>
-                            <div class="left">© 2024 FEU - INSTITUTE OF TECHNOLOGY</div>
-                            <div class="right">Announcement</div>
+                            <div class="left">
+                                <a href="https://www.feutech.edu.ph/">© 2024 FEU - INSTITUTE OF TECHNOLOGY</a>
+                            </div>
+                            <div class="social-media-links">
+                                <a href="https://www.facebook.com/FEUTechOfficial" target="_blank">
+                                    <img src="https://img.icons8.com/?size=100&id=8818&format=png&color=b6b6b6" class="Facebook">
+                                </a>
+                                <a href="https://x.com/FEUTechOfficial" target="_blank">
+                                    <img src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=b6b6b6" class="X">
+                                </a>
+                                <a href="https://www.youtube.com/FitEduPh" target="_blank">
+                                    <img src="https://img.icons8.com/?size=100&id=37326&format=png&color=b6b6b6"  class="YouTube">
+                                </a>
+                            </div>
                         </footer>
                     </div>
-
-                  
-              
-
             </div>
     </div>
 </body>
