@@ -195,6 +195,10 @@
             color: #988989;
         }
 
+        .portrait{
+            display: none;
+        }
+
          /* iMac Pro 27" 5K */
         @media (max-width: 3200px) and (orientation: landscape){
 
@@ -1645,12 +1649,15 @@ margin-right: 10px;
 
  /* iPad Pro 12.9" (2021) */
  @media (max-height: 1367px) and (orientation: portrait){
-    .row{ 
-    display: grid;
-}
+    
 
 .landscape{
     display: none;
+}
+
+.portrait{
+    display: block;
+    background-color: #f4f4f4;
 }
 
 
@@ -1747,6 +1754,51 @@ margin-right: 10px;
                         </footer>
                     </div>
             </div>
+    </div>
+
+    <div class="portrait">
+        <main class="right-content">
+            <img src="https://lh3.googleusercontent.com/d/1OYeIo8YG5f4KoxpS7OF-YHKLsVygpml0" alt="FEU Logo" class="FEU-logo mb-4">
+            <form onsubmit="redirectToProfile(event)">
+                <div class="input-forms">
+                    <div class="input-studentnumber">
+                        <label for="studentnumber"><strong>Student Number</strong></label>
+                    </div>
+                   
+                    <input type="text" id="studentnumber" name="studentnumber" required>
+                </div>
+
+                <div class="input-forms">
+                    <div class="input-password">
+                        <label for="password"><strong>Password</strong></label>
+                    </div>
+                    <input type="text" id="password" name="password" required>
+                </div>
+
+                <div class="forgot">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit">LOG IN</button>
+            </form>
+        </main>
+
+        <footer>
+            <div class="left">
+                <a href="https://www.feutech.edu.ph/">© 2024 FEU - INSTITUTE OF TECHNOLOGY</a>
+            </div>
+            <div class="social-media-links">
+                <a href="https://www.facebook.com/FEUTechOfficial" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=8818&format=png&color=b6b6b6" class="Facebook">
+                </a>
+                <a href="https://x.com/FEUTechOfficial" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=b6b6b6" class="X">
+                </a>
+                <a href="https://www.youtube.com/FitEduPh" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=37326&format=png&color=b6b6b6"  class="YouTube">
+                </a>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
