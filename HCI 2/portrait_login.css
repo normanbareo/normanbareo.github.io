@@ -2,6 +2,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     padding: 20px;
     color: #323232;
+
 }
 
 body, html {
@@ -114,7 +115,7 @@ footer {
   
 }
 
-.X, .Facebook, .YouTube{
+.X, .Facebook{
     width: 20px;
     margin-right: 15px;
 }
@@ -149,15 +150,14 @@ footer {
     
 .header{
     background-color: #004b1c;
-    padding: 5px 30px;
+    padding-top: 10px;
+    padding-right: 40px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: var(100);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 9%;
+    z-index: var(50);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -166,28 +166,45 @@ footer {
     font-weight: bold;
 }
 
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.nav{
-    display: none;
 }
 
 .bx{
     color: white;
-    font-size: 25px;
+    font-size: 30px;
+    cursor: pointer;
 
+}
+
+.bx:hover{
+    color: #ffc107;
+    font-size: 30px;
+    text-decoration: none;
+
+}
+
+ul{
+    list-style-type: none;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-size: 120%;
-    background-position: left -5px top -50px;
-    padding: 20px;
-    background-color: #000000;
+    border-radius: 5px;
+    padding: 30px;
+    /* background-color: #000000; */
+    background: url('https://lh3.googleusercontent.com/d/16IBjA6U130QVwK9S91dk0veY-655Q0Bg') repeat-y center center fixed;
+    background-size: 180%;
+    background-position: left 150px top 0px;
     width: 400px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     right: 0;
+
   }
   
   .dropdown-content a {
@@ -202,17 +219,20 @@ footer {
     display: block;
   }
 
-  .show {
+    .show {
     display: block;
 }
 
-.left-content{
+
+    
+    .left-content{
     margin-left: 1.1rem;
-    margin-top: 10px;
+    margin-top: 20px;
     }   
     
     .main-title{
     font-size: 1.45rem;
+    margin-top: 10px;
     }
     
     .sub-title{
@@ -243,7 +263,24 @@ footer {
     
     .left-bullet-row span {
     flex: 1;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     }
 
+    .FEU-logo{
+        margin-top: 120px;
+    }
+
+    footer{
+        padding: 10px;
+     
+        }
+        
+        .left a{
+        font-size: 10px;
+        }
+        
+        .X, .Facebook{
+        width: 20px;
+        margin-right: 10px;
+        }
 }
