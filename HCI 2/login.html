@@ -17,40 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="landscape_login.css">
     <link rel="stylesheet" href="portrait_login.css">
-
-    <style>
-        
- /* PORTRAIT iPad Pro 12.9" (2021) */
-    @media (max-height: 1367px) and (orientation: portrait){
-    
-        .landscape{
-            display: none;
-        }
-
-        .portrait{
-            display: block;
-            background-color: #f4f4f4;
-            padding: 0px;
-            margin-top: 0%;
-        }
-
-        .right-content {
-            margin-top: 0%;
-            margin-bottom: 8%;
-        }
-
-
-
-    }
-
-
-
-
-
-
-
-
-    </style>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -138,11 +105,43 @@
 
     <!-- PORTRAIT -->
     <div class="portrait">
-        <nav>
-            <div class="navbar-brand">
-                <h1>FEU Tech Student Portal</h1>
-            </div>
-         </nav>
+        <header class="header">
+            <a class="navbar-brand" href="login.html">FEU Tech Student Portal</a>
+            <ul>
+                <li class="dropdown">
+                    <i class='bx bx-chevron-down dropdown__icon' id="header-toggle"></i>
+                    <div class="dropdown-content">
+                        <h1 class="main-title">Welcome to the<br>FEU-Tech Student Portal!</h1>
+                        <h2 class="sub-title">with your Student Portal, you can: </h2>
+
+                        <div class="left-bullet-content">
+                            <div class="left-bullet-row">
+                                <img  src="https://img.icons8.com/?size=100&id=98957&format=png&color=FFFFFF" alt="Profile Icon">
+                                <span>View your personal information</span>
+                            </div>
+
+                            <div class="left-bullet-row">
+                                <img  src="https://img.icons8.com/?size=100&id=9466&format=png&color=FFFFFF" alt="Schedule Icon">
+                                <span>View your current schedule, academic grades,<br>assessment, clearances, and curriculum</span>
+                            </div>
+
+                            <div class="left-bullet-row">
+                                <img width="40" height="40" src="https://img.icons8.com/?size=100&id=Kqsi3v5rWFW9&format=png&color=FFFFFF" alt="Globe Icon">
+                                <span>Enroll online</span>
+                            </div>
+
+                            <div class="left-bullet-row">
+                                <img src="https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=FFFFFF" alt="Google Mail Icon">
+                                <span>Access and manage your student Google Mail</span>
+                            </div>
+                        </div>
+                      </div>
+                </li>
+            </ul>
+
+
+        </header>
+      
         <main class="right-content">
             <img src="https://lh3.googleusercontent.com/d/1OYeIo8YG5f4KoxpS7OF-YHKLsVygpml0" alt="FEU Logo" class="FEU-logo mb-4">
             <form onsubmit="redirectToProfile(event)">
